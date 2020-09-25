@@ -1,0 +1,16 @@
+a = list(map(int, input().split()))
+
+rem = a[1]
+
+def rev_mod(rem):
+	if rem % 2 == 0:
+		rem = rem / 2
+	else:
+		rem = (rem + 1000000007) / 2
+	return rem
+
+
+for i in range(a[0]-1):
+	rem = rev_mod(rem)
+	
+print(int(rem))
